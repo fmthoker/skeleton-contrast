@@ -6,7 +6,7 @@ pip install tensorboard
 
 # Skeleton-Contrastive 3D Action Representation Learning
 
-![arch](asset/teaser.png)
+![arch](images/teaser.png)
 
 This repository contains the implementation of our ACM Multi Media 2021 paper:
 
