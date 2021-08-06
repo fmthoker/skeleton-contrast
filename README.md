@@ -61,7 +61,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python action_classification.py \
  --finetune-dataset ntu60 --protocol cross_view --pretrain-skeleton-representation seq-based_and_graph-based  --finetune-skeleton-representation seq-based
 ```
 
-### Result
+### Results
 * 3D Action Classification Results
 ![arch](images/results_classification.png)
 
