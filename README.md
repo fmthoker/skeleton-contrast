@@ -4,12 +4,12 @@
 
 This repository contains the implementation of our ACM Multi Media 2021 paper:
 
-* intra and inter skeleton pretraining
+* inter-skeleton contrastive  pretraining
 * 3D action recognition and retrieval downstream
 
-### Link: 
+### Link:
 
-[[PDF]](to add)
+[[PDF]](https://fmthoker.github.io/publications/pdf/skeleton-contrast.pdf)
 [[Arxiv]](to add)
 
 ### Requirements
@@ -30,28 +30,28 @@ python ntu_gendata.py
 
 ### Pretrain Instruction
 
-* e.g Inter-skeleton contrast using seq-based and graph-based representation on cross-view NTU-60 
+* e.g Inter-skeleton contrast using seq-based and graph-based representation on cross-view NTU-60
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python  main_moco_inter_skeleton.py \
   --lr 0.01 \
   --batch-size 64 \
   --mlp --moco-t 0.07   --moco-k 16384  --checkpoint-path ./checkpoints/ntu_60_cross_view/interskeleton_seq_based_graph_based  --schedule 351  --epochs 451  --pre-dataset ntu60 --skeleton-representation seq-based_and_graph-based --protocol cross_view
 ```
-* use script_pretrain.sh to pretrain  other configrations 
+* use script_pretrain.sh to pretrain  other configrations
 
 ### Downstream Instruction
  * 3D Action Classification (Linear evaluation )
- * e.g Train a linear classifier on seq-based query encoder features pretrained via inter-skeleton contrast bewtween seq-based and graph-based representations
+ * e.g Train a linear classifier on seq-based query encoder features pretrained via inter-skeleton contrast
 ```
 CUDA_VISIBLE_DEVICES=0,1,2,3 python action_classification.py \
   --lr 0.1 \
   --batch-size 64 \
  --pretrained  ./checkpoints/ntu_60_cross_view/interskeleton_seq_based_graph_based/checkpoint_0450.pth.tar \
-  --finetune-dataset ntu60 --protocol cross_view --pretrain-skeleton-representation seq-based_and_graph-based  --finetune-skeleton-representation seq-based  
+  --finetune-dataset ntu60 --protocol cross_view --pretrain-skeleton-representation seq-based_and_graph-based  --finetune-skeleton-representation seq-based
 ```
 
  * 3D Action  Retrieval (KNN evaluation)
- * Use a Knn classifier on seq-based query encoder features  pretrained via inter-skeleton contrast bewtween seq-based and graph-based representations
+ * Use a Knn classifier on seq-based query encoder features  pretrained via inter-skeleton contrast
 ```
  CUDA_VISIBLE_DEVICES=0,1,2,3 python action_retrieval.py \
   --lr 0.1 \
@@ -59,3 +59,10 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python action_classification.py \
   --knn-neighbours 1 \
   --pretrained  ./checkpoints/ntu_60_cross_view/interskeleton_seq_based_graph_based/checkpoint_0450.pth.tar \
  --finetune-dataset ntu60 --protocol cross_view --pretrain-skeleton-representation seq-based_and_graph-based  --finetune-skeleton-representation seq-based
+```
+
+### Result
+3D  action classification results:
+![arch](images/results_classification.png)
+3D  action retrieval results:
+![arch](images/results_retrieval.png)
