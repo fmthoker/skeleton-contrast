@@ -67,3 +67,6 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python action_classification.py \
 
 * 3D Action  Retrieval Results
 ![arch](images/results_retrieval.png)
+
+### Pretrained Weights
+* TO ADD
