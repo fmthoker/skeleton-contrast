@@ -2,7 +2,7 @@
 
 ![arch](images/teaser.png)
 
-This repository contains the implementation of our ACM Multi Media 2021 paper:
+This repository contains the implementation of our ACM MultiMedia 2021 paper:
 
 * inter-skeleton contrastive  pretraining
 * 3D action recognition and retrieval downstream
