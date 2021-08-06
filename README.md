@@ -62,7 +62,8 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python action_classification.py \
 ```
 
 ### Result
-3D  action classification results:
+* 3D Action Classification Results
 ![arch](images/results_classification.png)
-3D  action retrieval results:
+
+* 3D Action  Retrieval Results
 ![arch](images/results_retrieval.png)
