@@ -68,5 +68,6 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python action_classification.py \
 * 3D Action  Retrieval Results
 ![arch](images/results_retrieval.png)
 
-### Pretrained Weights
-* TO ADD
+### Pretrained Models
+
+* NTU 60 and 120 : [[pretrained_models]](https://drive.google.com/drive/folders/1xkqs4bSPRVFrHhHC_TLPCbn4N_NfbZG7?usp=sharing)
