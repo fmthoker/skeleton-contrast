@@ -62,6 +62,10 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python action_classification.py \
 ```
   * Check [script_action_classification.sh](https://github.com/fmthoker/skeleton-contrast/blob/main/script_action_classification.sh) and [script_action_retrieval.sh](https://github.com/fmthoker/skeleton-contrast/blob/main/script_action_retrieval.sh) for other downstream configrations
 
+### Pretrained Models
+
+* NTU 60 and 120 : [pretrained_models](https://drive.google.com/drive/folders/1xkqs4bSPRVFrHhHC_TLPCbn4N_NfbZG7?usp=sharing)
+
 ### Results
 * 3D Action Classification Results
 ![arch](images/results_classification.png)
@@ -69,6 +73,4 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python action_classification.py \
 * 3D Action  Retrieval Results
 ![arch](images/results_retrieval.png)
 
-### Pretrained Models
 
-* NTU 60 and 120 : [pretrained_models](https://drive.google.com/drive/folders/1xkqs4bSPRVFrHhHC_TLPCbn4N_NfbZG7?usp=sharing)
