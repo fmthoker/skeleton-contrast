@@ -37,7 +37,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python  main_moco_inter_skeleton.py \
   --batch-size 64 \
   --mlp --moco-t 0.07   --moco-k 16384  --checkpoint-path ./checkpoints/ntu_60_cross_view/interskeleton_seq_based_graph_based  --schedule 351  --epochs 451  --pre-dataset ntu60 --skeleton-representation seq-based_and_graph-based --protocol cross_view
 ```
-* check [script_pretrain.sh](https://github.com/fmthoker/skeleton-contrast/blob/main/script_pretrain.sh)for other configrations
+* check [script_pretrain.sh](https://github.com/fmthoker/skeleton-contrast/blob/main/script_pretrain.sh) for other pretraining configrations
 
 ### Downstream Instruction
  * 3D Action Classification (Linear evaluation )
@@ -60,7 +60,7 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python action_classification.py \
   --pretrained  ./checkpoints/ntu_60_cross_view/interskeleton_seq_based_graph_based/checkpoint_0450.pth.tar \
  --finetune-dataset ntu60 --protocol cross_view --pretrain-skeleton-representation seq-based_and_graph-based  --finetune-skeleton-representation seq-based
 ```
-  * Check 
+  * Check [script_action_classification.sh](https://github.com/fmthoker/skeleton-contrast/blob/main/script_action_classification.sh) and [script_action_retrieval.sh](https://github.com/fmthoker/skeleton-contrast/blob/main/script_action_retrieval.sh) for other downstream configrations
 
 ### Results
 * 3D Action Classification Results
