@@ -10,7 +10,7 @@ This repository contains the implementation of our ACM MultiMedia 2021 paper:
 ### Link:
 
 [[PDF]](https://fmthoker.github.io/publications/pdf/skeleton-contrast.pdf)
-[[Arxiv]](to add)
+[[Arxiv]](https://arxiv.org/pdf/2108.03656.pdf)
 
 ### Requirements
 ```
