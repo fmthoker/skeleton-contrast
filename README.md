@@ -74,3 +74,13 @@ CUDA_VISIBLE_DEVICES=0,1,2,3 python action_classification.py \
 ![arch](images/results_retrieval.png)
 
 
+### Citation
+If you use our work or code, kindly consider citing our paper:
+```
+@InProceedings{fmthoker_acmmm,
+  author    = {Fida Mohammad Thoker, Hazel Doughty and Cees Snoek},
+  title     = {Skeleton-Contrastive 3D Action Representation Learning},
+  booktitle = {in Proceedings of the 29th ACM International Conference on Multimedia,(ACM MM), 2021},
+  year      = {2021},
+}
+```
